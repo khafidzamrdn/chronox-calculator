@@ -1,0 +1,16 @@
+{
+  "appId": "com.chronox.stopwatch",
+  "appName": "ChronoX Stopwatch",
+  "webDir": "www",
+  "server": {
+    "androidScheme": "https"
+  },
+  "android": {
+    "backgroundColor": "#1a1a2e",
+    "allowMixedContent": false,
+    "captureInput": false,
+    "webContentsDebuggingEnabled": false,
+    "minSdkVersion": 21,
+    "targetSdkVersion": 34
+  }
+}
