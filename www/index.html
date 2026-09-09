@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="theme-color" content="#1a1a2e">
+    <title>ChronoX Stopwatch</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="app-header">
+            <h1>ChronoX Stopwatch</h1>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                <span id="themeIcon">🌙</span>
+            </button>
+        </header>
+
+        <!-- Stopwatch Display -->
+        <main class="stopwatch-container">
+            <div class="stopwatch-display">
+                <span id="hours">00</span><span class="time-separator">:</span><span id="minutes">00</span><span class="time-separator">:</span><span id="seconds">00</span><span class="milliseconds-separator">.</span><span id="milliseconds">000</span>
+            </div>
+
+            <!-- Buttons -->
+            <div class="button-container">
+                <button id="startBtn" class="btn btn-primary btn-lg">
+                    <span class="btn-icon">▶</span>
+                    <span class="btn-text">Start</span>
+                </button>
+                <button id="lapBtn" class="btn btn-secondary btn-lg" disabled>
+                    <span class="btn-icon">🏁</span>
+                    <span class="btn-text">Lap</span>
+                </button>
+                <button id="resetBtn" class="btn btn-danger btn-lg" disabled>
+                    <span class="btn-icon">🔄</span>
+                    <span class="btn-text">Reset</span>
+                </button>
+            </div>
+
+            <!-- Statistics -->
+            <div class="stats-container" id="statsContainer" style="display: none;">
+                <div class="stat-card">
+                    <span class="stat-label">Lap Tercepat</span>
+                    <span class="stat-value" id="fastestLap">--:--.---</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Lap Terlambat</span>
+                    <span class="stat-value" id="slowestLap">--:--.---</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-label">Total Lap</span>
+                    <span class="stat-value" id="totalLaps">0</span>
+                </div>
+            </div>
+
+            <!-- Lap List -->
+            <div class="lap-container" id="lapContainer">
+                <div class="lap-header">
+                    <h2>Riwayat Lap</h2>
+                    <button id="clearLapsBtn" class="btn-clear" style="display: none;">Hapus Semua</button>
+                </div>
+                <div class="lap-list" id="lapList">
+                    <div class="empty-lap-message">Belum ada lap tercatat</div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
